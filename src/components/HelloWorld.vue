@@ -1,5 +1,15 @@
 <template>
   <div class="hello">
+    <div class="test">
+      wo shi test
+    </div>
+    <img src="../assets/logo.png">
+    <div>
+      <el-button @click="add()">默认按钮</el-button>
+      <el-button @click="remote_contao_add()" type="primary">主要按钮</el-button>
+    </div>
+    <router-view></router-view>
+    <div>bottom</div>
     <h1>{{ msg }}</h1>
     <p>
       For guide and recipes on how to configure / customize this project,<br>
@@ -14,16 +24,23 @@
 </template>
 
 <script>
+import { get} from '../api/api.js'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    get('dashBoard', {}, {page: 1, index: 1})
+    .then(val=>{
+      console.log(val)
+    })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 h3 {
   margin: 40px 0 0;
 }
@@ -38,4 +55,9 @@ li {
 a {
   color: #42b983;
 }
+.test {
+  color: $blue;
+}
 </style>
+
+

@@ -1,15 +1,6 @@
 <template>
   <div id="app">
-    <div class="test">
-      wo shi test
-    </div>
-    <img src="./assets/logo.png">
-    <div>
-      <el-button @click="add()">默认按钮</el-button>
-      <el-button @click="remote_contao_add()" type="primary">主要按钮</el-button>
-    </div>
     <router-view></router-view>
-    <div>bottom</div>
   </div>
 </template>
 
@@ -36,8 +27,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@gray:#4a90e2;
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,9 +35,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  .test {
-    color: @gray;
-  }
+  
 }
 </style>
 
