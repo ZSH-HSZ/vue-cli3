@@ -31,10 +31,10 @@ export default {
     msg: String
   },
   mounted() {
-    get('dashBoard', {}, {page: 1, index: 1})
-    .then(val=>{
-      console.log(val)
-    })
+    // get('dashBoard', {}, {page: 1, index: 1})
+    // .then(val=>{
+    //   console.log(val)
+    // })
   }
 }
 </script>
