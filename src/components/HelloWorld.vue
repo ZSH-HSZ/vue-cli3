@@ -24,17 +24,23 @@
 </template>
 
 <script>
-import { get} from '../api/api.js'
+import { post, get } from '../api/api.js'
+import axios from 'axios'
+var moment = require('moment');
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
   mounted() {
-    // get('dashBoard', {}, {page: 1, index: 1})
-    // .then(val=>{
-    //   console.log(val)
-    // })
+    get('dashBoard', {}, {page: 1, index: 1})
+    .then(val=>{
+      console.log(val)
+    })
+    post('dashBoard', {}, {page: 1, index: 1})
+    .then(val=>{
+      console.log(val)
+    })
   }
 }
 </script>
