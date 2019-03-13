@@ -17,6 +17,7 @@
       <a href="https://cli.vuejs.org" target="_blank">vue-cli documentation</a>.
     </p>
     <h3>Installed CLI Plugins</h3>
+    <router-link to="/testSlot">link to</router-link>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a></li>
     </ul>

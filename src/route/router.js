@@ -11,5 +11,7 @@ const router = new VueRoute({
     {path: '/testSlot', component: TestSlot, name: 'TestSlot'},
   ]
 })
-
+router.beforeEach((to, from, next) => {
+  console.log(to, from)
+});
 export default router
